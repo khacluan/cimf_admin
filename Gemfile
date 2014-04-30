@@ -5,7 +5,8 @@ gem 'rails', '3.2.17'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
+
 
 gem 'active_scaffold'
 gem 'devise'
@@ -20,6 +21,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+platforms :ruby do # linux
+  gem 'unicorn'
+  gem 'mysql2'
 end
 
 gem 'jquery-rails'
